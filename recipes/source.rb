@@ -39,7 +39,7 @@ execute "extract-erlang" do
 end
 
 execute "configure-build-install-erlang" do
-  command "./configure --prefix=#{node[:erlang][:source][:prefix]} #{node[:erlang][:source][:configure_arguments]} && make && make install"
+  command "./configure --prefix=#{node[:erlang][:source][:prefix]} #{node[:erlang][:source][:compile_flags]} && make && make install"
   cwd "#{Chef::Config['file_cache_path']}/otp_src_#{version}"
   creates "#{node[:erlang][:source][:prefix]}/lib/erlang/bin/erl"
 end
