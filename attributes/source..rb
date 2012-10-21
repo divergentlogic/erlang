@@ -1,0 +1,5 @@
+default[:erlang][:source][:site] = "http://www.erlang.org/download"
+default[:erlang][:source][:checksum] = "03eb0bd640916666ff83df1330912225fbf555e0c8cf58bb35d8307a314f1158"
+default[:erlang][:source][:version] = "R15B02"
+default[:erlang][:source][:prefix] = "/usr/local"
+default[:erlang][:source][:configure_arguments] = "--enable-smp-support --enable-threads --enable-kernel-poll --with-ssl"
